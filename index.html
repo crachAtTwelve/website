@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Website</title>
+    <link rel="stylesheet" href="try2.1.css" />
+    <link rel="stylesheet" href="try1.css" />
+    <link rel="stylesheet" href="try2.3.css" />
+    <style>
+      body {
+        margin: 0;
+        /* vh 是view height 既视窗高度的意思，100就是100%占满窗口高度 */
+        height: 100vh;
+        background-color: #eee;
+      }
+    </style>
+  </head>
+  <body class="flex column" style="overflow: auto">
+    <!-- <div class="flex banner-area" id="home"></div> -->
+    <div class="flex">
+      <img class="banner" />
+      <div class="content3">
+        <button type="button" onclick="window.location.href='#fairy'">
+          <span></span>
+          to Enter my world
+        </button>
+      </div>
+    </div>
+    <div class="flex" style="height: 100vh">
+      <!-- 侧边栏 -->
+      <div
+        style="width: 200px; z-index: 3"
+        class="ceBian flex column baiSe yinYing"
+      >
+        <!-- 侧边头像栏 -->
+        <div
+          style="
+            padding: 10px;
+            align-items: center;
+            justify-content: center;
+            border-bottom: 1px solid #999;
+          "
+          class="flex"
+        >
+          <img
+            alt="logo"
+            src="https://ts3.cn.mm.bing.net/th?id=OIP-C.XfEFe7yXdfZwHJ4zHfGyBQAAAA&w=250&h=250&c=8&rs=1&qlt=90&o=6&dpr=1.2&pid=3.1&rm=2"
+            width="40px"
+            height="40px"
+          />
+          <div id="fairy" style="margin-left: 10px">格斗小仙女</div>
+        </div>
+        <!-- 导航栏 -->
+        <div class="flex1">
+          <div class="daoHang"><a href="https://www.baidu.com">百度</a></div>
+          <div class="daoHang">
+            <a href="https://www.tsinghua.edu.cn/">清华大学</a>
+          </div>
+          <div class="daoHang">
+            <a href="https://www.pku.edu.cn/">北京大学</a>
+          </div>
+          <div class="daoHang"><a href="">导航</a></div>
+          <div class="daoHang"><a href="">导航</a></div>
+        </div>
+      </div>
+      <!-- 主区域 -->
+      <div class="flex flex1 column">
+        <!-- 头部栏 -->
+        <div
+          style="height: 60px; z-index: 2; background-color: #d4d7de"
+          class="flex baiSe yinYing"
+        >
+          <!-- <div style="margin-left: auto ;"> -->
+          <!-- <p>快捷栏</p> -->
+          <a href="#">home</a>
+          <div class="navbar3">
+            <ul>
+              <li><a href="#clue">提示区</a></li>
+              <li><a href="#list-end">列表底部</a></li>
+            </ul>
+          </div>
+          <!-- <a href="#clue">提示区</a> <a href="#list-end">列表底部</a> -->
+          <!-- </div> -->
+        </div>
+        <!-- 内容区 -->
+        <div class="flex flex1 neiRong reverse" style="overflow: auto">
+          <!-- 左区 -->
+          <div style="flex: 3" class="flex column mg8">
+            <!-- 数据区 -->
+            <div class="flex shuJuQu">
+              <!-- 四个小块显示重点数据 -->
+              <div class="shuJu baiSe yinYing flex1 mgr8">数据区1</div>
+              <div class="shuJu baiSe yinYing flex1 mgr8">数据区2</div>
+              <div class="shuJu baiSe yinYing flex1 mgr8">数据区3</div>
+              <div class="shuJu baiSe yinYing flex1">数据区4</div>
+            </div>
+            <!-- 列表区，列表数据可以无限增加 -->
+            <div class="flex column">
+              <!-- 列表项 -->
+              <div class="lieBiaoXiang mgt8 baiSe yinYing">列表1</div>
+              <div class="lieBiaoXiang mgt8 baiSe yinYing">列表2</div>
+              <div class="lieBiaoXiang mgt8 baiSe yinYing">列表3</div>
+              <div class="lieBiaoXiang mgt8 baiSe yinYing">列表4</div>
+              <div class="lieBiaoXiang mgt8 baiSe yinYing">列表5</div>
+              <div class="lieBiaoXiang mgt8 baiSe yinYing">列表6</div>
+              <div class="lieBiaoXiang mgt8 baiSe yinYing">列表7</div>
+              <div class="lieBiaoXiang mgt8 baiSe yinYing">列表8</div>
+              <div id="list-end" class="lieBiaoXiang mgt8 baiSe yinYing">
+                列表9
+              </div>
+            </div>
+          </div>
+          <!-- 右区 -->
+          <div style="flex: 1" class="youQu flex column mgr8 mgt8">
+            <!-- 提示区 -->
+            <div id="clue" style="height: 150px" class="baiSe yinYing">
+              提示区
+            </div>
+            <!-- 消息区 -->
+            <div style="height: 300px" class="mgt8 baiSe yinYing">消息区</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

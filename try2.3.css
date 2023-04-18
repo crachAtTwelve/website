@@ -1,0 +1,93 @@
+.banner {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0.1),
+        rgba(0, 0, 0, 0.1)
+      ),
+      url(2.jpg);
+    background-position: center;
+    background-size: cover;
+    z-index: -1;
+  }
+  .content3 {
+    text-align: center;/*盒子内的文字居中*/
+    color: #fff;
+    width: 100%;
+    position: absolute;
+    /*现在 在banner盒子中navbar盒子压在concent盒子上面*/
+    transform: translateY(-50%);/*变换y轴 从左上角向下为y轴方向，因此-50%是向上移动轴*/
+    top: 50%;/*向上移动conten元素总体的50%*/
+    /*相当于用content盒子的中轴线与navbar盒子下沿重合*/
+  }
+  button{
+    /*按钮的宽度 内边距*/
+    width: 200px;
+    padding: 15px  0;
+    margin:20px 10px;/*按钮上下距div20px 两个按钮之间10+10px*/
+    border-radius: 25px;/*圆角*/
+    /*边框*/
+    font-weight: bold;/*粗细*/
+    border:2px solid #009688;
+    background:transparent;/*背景颜色透明*/
+  
+    text-align: center;
+    color:#fff;
+    cursor:pointer;/*光标变成小手形状*/
+    overflow: hidden;/*字多隐藏 防止字超出边框*/
+    text-transform: uppercase; /* 大写字母  */
+    font-family: sans-serif;
+    position:relative;
+  }
+  span{
+    position:absolute;/*与上面relative组合*/
+    background: #009688;
+    height: 100%;
+    width: 0;
+    border-radius:25px;
+    /*button是相对位置span是绝对位置。因此span的左上角与button的文字左上角对其 现在移动对齐span和button对齐*/
+    left:0;
+    bottom:0;
+    z-index: -1;/*span盖子放置下一层位于文字下方 防止变色时盖子覆盖文字*/
+    transition:0.5s; 
+  }
+  button:hover span{
+    width:100%;
+  }
+  button:hover{
+    /*span覆盖时与button的边框不是严丝合缝的，所以去掉边框更加美观*/
+    border:none;
+  } 
+
+  .navbar3 {
+    margin-left: auto;
+    align-items: center;
+    justify-content: space-between;
+   
+  }
+  .navbar3 ul li a {
+    text-decoration: none; /*去掉<a>链接下的横线*/
+    color: #14c6e2;
+    text-transform: uppercase; /* 大写字母  */
+  }
+  .navbar3 ul li {
+    list-style: none; /*列表前无标记*/
+    display: inline-block; /*inline使默认竖向排列的盒子变为横向默认不能修改边距，block增加给盒子能赋值边距的能力*/
+    margin: 0 20px;
+    position: relative; /*绝对位置*/
+  }
+  .navbar3 ul li::after {
+    /*伪元素 直接接在后面*/
+    position: absolute; /*相对于绝对位置的位置*/
+    content: ""; /* 伪元素为空*/
+    width: 0; /*和伪元素前的元素宽度相当*/
+    background: #009688; /*现在 和元素一样大小一样的背景为绿色的的空方块在元素后面*/
+    height: 3px; /*伪元素高度保留3px 正好成一条线*/
+  
+    left: 0; /*向左移动 现在伪元素和元素左边重合了*/
+    bottom: -10px; /*向下移动 buttom对应top*/
+    transition: 0.5s; /*过渡时间0.5s 这样从0到100就会像进度条一样*/
+  }
+  .navbar3 ul li:hover:after {
+    width: 100%; /*鼠标触碰后 宽度变为100*/
+  }
