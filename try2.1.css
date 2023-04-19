@@ -42,7 +42,8 @@
 .daoHang {
   padding: 10px 20px;
   border-bottom: 1px solid rgb(201, 201, 201);
-  font-size: 14px;
+  font-size: 20px;
+  font-family: Georgia, serif;
   color: #666;
 }
 /*取消滚动条*/
